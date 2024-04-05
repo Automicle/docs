@@ -1,0 +1,167 @@
+{
+    "WIDGET_BUTTON_TYPE" : "inline",
+    "THEME_COLOR" : "#5C305F",
+    "THEME_BORDER_RADIUS" : "10px",
+    "WIDGET_BORDER" : "1px solid #121212",
+    "WIDGET_EDGES" : "8px",
+    "USER_LOCALE" : "nl-NL",
+    "BRANDING_LOGO_URL" : "https://automicle-logo-url.com",
+    "ENABLE_EMAIL_PNR" : true,
+    "SUPPORT_EMAIL" : "support@automicle.com",
+    "IOS_APP_LINK" : "https://apps.apple.com/us/app/acompanion/id6449096055/",
+    "ANDROID_APP_LINK" : "https://play.google.com/store/apps/details?id=com.automicle.app.companion",
+    "JOURNEY_INSTRUCTIONS" : [
+        "Activate your ticket before the journey date.",
+        "Familiarize yourself with the rules and regulations.",
+        "Arrive early at the departure point.",
+        "Keep your ticket accessible throughout the journey."
+    ],
+    "APP_DOWNLOAD_INSTRUCTIONS" : [
+        "Download the App: Tap on the provided image to download the companion app.",
+        "Enter PNR and Confirm: Open the app, enter your PNR, and confirm your journey.",
+        "Scan Ticket: Use the app to scan each ticket’s barcode or QR code for easy access and validation."
+    ],
+    "JOURNEY_ENABLED_DATES" : [
+        "2023-09-02",
+        "2023-10-07"
+    ],
+    "JOURNEY_ENABLED_WEEKDAYS" : [
+        "Sunday",
+        "Monday",
+        "Wednesday"
+    ],
+    "JOURNEY_TICKET_REDIRECT_LINK" : "https://automicle.com/tickets",
+    "USER_INPUT_FORM" : [
+        {
+            "type" : "text",
+            "label" : "First Name",
+            "placeholder" : "Enter your first name",
+            "name" : "firstName"
+        },
+        {
+            "type" : "text",
+            "label" : "Last Name",
+            "placeholder" : "Enter your last name",
+            "name" : "lastName"
+        },
+        {
+            "type" : "email",
+            "label" : "Email",
+            "placeholder" : "Enter your email",
+            "name" : "email"
+        },
+        {
+            "type" : "dropdown",
+            "label" : "University",
+            "placeholder" : "Select",
+            "name" : "university",
+            "options" : [
+                {
+                    "id" : 1,
+                    "name" : "Delft University of Technology (TU Delft)"
+                },
+                {
+                    "id" : 2,
+                    "name" : "University of Amsterdam (UvA)"
+                },
+                {
+                    "id" : 3,
+                    "name" : "Leiden University"
+                },
+                {
+                    "id" : 4,
+                    "name" : "Utrecht University"
+                },
+                {
+                    "id" : 5,
+                    "name" : "Erasmus University Rotterdam"
+                },
+                {
+                    "id" : 6,
+                    "name" : "Wageningen University & Research"
+                },
+                {
+                    "id" : 7,
+                    "name" : "University of Groningen (RUG)"
+                },
+                {
+                    "id" : 8,
+                    "name" : "VU University Amsterdam (VU)"
+                },
+                {
+                    "id" : 9,
+                    "name" : "Maastricht University (UM)"
+                },
+                {
+                    "id" : 10,
+                    "name" : "Radboud University (Radboud Universiteit Nijmegen)"
+                }
+            ],
+            "optionName" : "name",
+            "optionID" : "id"
+        },
+        {
+            "type" : "checkbox",
+            "name" : "termsNConditionCheck",
+            "checkboxText" : "<p>By using this service, you accept <a href=‘https://legal.automicle.com’ target=‘_blank’ rel=‘noreferrer’>our terms and conditions</a>.</p>"
+        },
+        {
+            "type" : "checkbox",
+            "name" : "someInformationCheck",
+            "checkboxText" : "<p>This ticket is non-changeable, meaning you cannot change the name on it.</p>"
+        },
+        {
+            "type": "alertcard",
+            "alertCardType": "alert || warn || info",
+            "heading": "This is a heading || null",
+            "body": "This is body. || null "
+        }
+
+    ],
+    "START_LOCATION" : [
+        {
+            "name" : "Amsterdam Airport Schiphol (AMS)",
+            "lon" : 4.7643411,
+            "lat" : 52.30951,
+            "image" : "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media",
+            "stopType" : "RAIL"
+        },
+        {
+            "name" : "Utrecht Central",
+            "lon" : 5.1073394,
+            "lat" : 52.0894311,
+            "image" : "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media",
+            "stopType" : "RAIL"
+        },
+        {
+            "name" : "Amsterdam Central Station",
+            "lon" : 4.8977872,
+            "lat" : 52.3790564,
+            "image" : "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media",
+            "stopType" : "RAIL"
+        }
+    ],
+    "END_LOCATION" : [
+        {
+            "name" : "Amsterdam Airport Schiphol (AMS)",
+            "lon" : 4.7643411,
+            "lat" : 52.30951,
+            "image" : "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media",
+            "stopType" : "RAIL"
+        },
+        {
+            "name" : "Utrecht Central",
+            "lon" : 5.1073394,
+            "lat" : 52.0894311,
+            "image" : "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media",
+            "stopType" : "RAIL"
+        },
+        {
+            "name" : "Amsterdam Central Station",
+            "lon" : 4.8977872,
+            "lat" : 52.3790564,
+            "image" : "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media",
+            "stopType" : "RAIL"
+        }
+    ]
+}
