@@ -112,6 +112,13 @@ Example:
 
     "JOURNEY_ENABLED_DATES": ["2023-09-02", "2023-10-07"]
 
+## `JOURNEY_RANGE_DATES`
+Type: `array`  
+Description: Select a range of dates on the calendar for the journey feature 
+Example: 
+
+    "JOURNEY_ENABLED_DATES": ["2023-09-02", "2023-10-07"]
+
 ## `JOURNEY_ENABLED_WEEKDAYS`
 Type: `array`  
 Description: Days of the week when the journey feature is available.  
@@ -204,7 +211,7 @@ Description: Configuration for input forms presented to the user, including fiel
 
 ## `START_LOCATION` and `END_LOCATION`
 Type: `array`  
-Description: Lists of start and end locations for journeys, including details such as name, coordinates, image, and stop type.  
+Description: Lists of start and end locations for journeys, including details such as name, coordinates, image, and stop type. For convenience and consistency, we provide ENUM values for stop types along with sample images for each public transport category. These ENUMs and images serve as a reference for implementing realistic and visually consistent stops within your application.  
 Example:
 
     "START_LOCATION": [
@@ -217,3 +224,41 @@ Example:
         },
         ...
     ]
+
+## Stop Type ENUMs and Stop Images
+
+For defining the `stopType`, refer to the following ENUM values and associated sample images to represent various types of public transport stops:
+
+1. ##### TRAM
+   - **stopType:** "TRAM"
+   - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftram.png?alt=media
+
+2. ##### SUBWAY
+   - **stopType:** "SUBWAY"
+   - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain.png?alt=media
+
+3. ##### RAIL
+   - **stopType:** "RAIL"
+   - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Ftrain%20(1).png?alt=media
+
+4. ##### BUS
+   - **stopType:** "BUS"
+   - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Fschool-bus.png?alt=media
+
+5. ##### STREET
+   - **stopType:** "STREET"
+   - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Fsignpost.png?alt=media
+
+6. ##### ADDRESS
+    - **stopType:** "ADDRESS"
+    - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Faddress-book.png?alt=media
+
+7. ##### EVENTS
+    - **stopType:** "EVENTS"
+    - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2F4781851_calendar_date_day_event_month_icon.svg?alt=media
+
+8. ##### OTHERS
+    - **stopType:** "OTHERS"
+    - **image:** https://firebasestorage.googleapis.com/v0/b/automicle-public/o/transport_types%2Faddress-book.png?alt=media
+
+
