@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; 
+        }
+       
+        /* Styles for the widget container */
+        #widget-container {
+            /* Add specific styles for the widget container here if necessary */
+        }
+    </style>
+</head>
+<body>
+    <div id="widget-container">Widget embedded</div>
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w["Automicle-v1"] = o;
+            w[o] = w[o] || function () {
+                (w[o].q = w[o].q || []).push(arguments);
+            };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "w1", "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/widget.js?alt=media&token=cc41baf3-b8b4-493f-b4f5-fb009a63a9d5");
+        w1("init", {
+            TARGET_ELEMENT_ID: "widget-container", // ID of the div where the widget will be embedded
+            GMAP_API_KEY: "API_KEY", // Your Google Maps API key, Will be deprecated soon
+            WIDGET_ID: "WIDGET_ID", // Unique identifier for the widget
+            ENVIRONMENT: "DEVELOPMENT", // Environment setting (DEVELOPMENT or PRODUCTION)
+        });
+    </script>
+</body>
+</html>
