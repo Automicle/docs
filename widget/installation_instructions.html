@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <style>
-        
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
-        
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000; 
-        }
-    </style>
-</head>
-<body>
-    <--
-        To add space or shadow around the widget, wrap it inside a <div></div> and style the division as per your needs.Ï
-    /-->
-    <div id="widget-container">Widget embedded</div>
-    <script>
-        (function (w, d, s, o, f, js, fjs) {
-            w["Automicle-v1"] = o;
-            w[o] = w[o] || function () {
-                (w[o].q = w[o].q || []).push(arguments);
-            };
-            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-            js.id = o;
-            js.src = f;
-            js.async = 1;
-            fjs.parentNode.insertBefore(js, fjs);
-        })(window, document, "script", "w1", "https://firebasestorage.googleapis.com/v0/b/automicle-public/o/widget.js?alt=media&token=cc41baf3-b8b4-493f-b4f5-fb009a63a9d5");
-        w1("init", {
-            TARGET_ELEMENT_ID: "widget-container", // ID of the div where the widget will be embedded
-            WIDGET_ID: "WIDGET_ID", // Unique identifier for the widget
-            ENVIRONMENT: "DEVELOPMENT", // Environment setting (DEVELOPMENT or PRODUCTION)
-            APPEARANCE_OPTIONS: { // Optional parameters to override the existing widget configuration. Check sample-widget-configuration.json for more parameters
-                    THEME_COLOR: "#000",
-                    WIDGET_BUTTON_TYPE: "floating_button",
-            }, 
-        });
-    </script>
-</body>
+    <head>
+        <title>Test - Automicle</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no,"
+        />
+        <link rel="shortcut icon" type="image/ico" href="automicle.ico" />
+        <style>
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                font-weight: 500;
+                color: var(--dark);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                overflow: auto;
+                box-sizing: border-box;
+            }
+            body {
+                display: grid;
+                place-items: center;
+                background: linear-gradient(
+                    90deg,
+                    hsla(197, 14%, 57%, 1) 0%,
+                    hsla(192, 17%, 94%, 1) 100%
+                );
+            }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background: linear-gradient(
+                        90deg,
+                        hsla(205, 46%, 10%, 1) 0%,
+                        hsla(191, 28%, 23%, 1) 50%,
+                        hsla(207, 41%, 27%, 1) 100%
+                    );
+                }
+            }
+            #automicle-iframe {
+                border: none;
+                height: 720px;
+                width: 375px;
+                max-width: 375px;
+            }
+            @media (max-width: 767px) {
+                #automicle-iframe {
+                    height: 100dvh;
+                    width: 100dvw;
+                    max-width: 100dvw;
+                }
+            }
+        </style>
+        <!-- The script tag is important for the proper functioning of the widget across various devices -->
+        <script src="https://www.script.automicle.com/"></script>
+    </head>
+    <body>
+        <!-- Optionally wrapping the iframe with a custom id to the wrapper(div) -->
+        <div id="book">
+            <iframe
+                allowfullscreen
+                allow="geolocation"
+                src="https://widget.automicle.com/widget.html?'WIDGET_ID'&env='DEVELOPMENT||PRODUCTION'"
+                width="375"
+                height="720"
+                style="border: none"
+                id="automicle-iframe"
+                title="widget"
+            ></iframe>
+        </div>
+    </body>
 </html>
