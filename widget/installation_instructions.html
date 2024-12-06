@@ -58,7 +58,13 @@
         <script src="https://www.script.automicle.com/"></script>
     </head>
     <body>
-        <!-- Optionally wrapping the iframe with a custom id to the wrapper(div) -->
+        <!-- Widget -->
+        <!-- Parameters: widgetId, env, iframeWrapperId, openButtonText -->
+        <!-- widgetId: widget id provided by Automicle -->
+        <!-- env: environment, can be DEVELOPMENT or PRODUCTION -->
+        <!-- iframeWrapperId: id of the div where the widget will be placed, for automatic scroll  -->
+        <!-- openButtonText: for floating widget, text of the button that opens the widget -->
+        <!-- For inline widget, omit openButtonText parameter -->
         <div id="book"> <!-- This identifier should match with the iframeWrapperId -->
             <iframe
                 allowfullscreen

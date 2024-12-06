@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no,"
+        />
+        <meta
+            http-equiv="Cache-Control"
+            content="no-cache, no-store, must-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <title>Automicle</title>
+        <link rel="shortcut icon" type="image/ico" href="automicle.ico" />
+        <style>
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                font-weight: 500;
+                color: var(--dark);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                overflow: auto;
+                box-sizing: border-box;
+
+                --e-global-color-primary: #003346;
+            }
+            body {
+                display: grid;
+                place-items: center;
+                background: linear-gradient(
+                    90deg,
+                    hsla(197, 14%, 57%, 1) 0%,
+                    hsla(192, 17%, 94%, 1) 100%
+                );
+            }
+            * {
+                box-sizing: border-box;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background: linear-gradient(
+                        90deg,
+                        hsla(205, 46%, 10%, 1) 0%,
+                        hsla(191, 28%, 23%, 1) 50%,
+                        hsla(207, 41%, 27%, 1) 100%
+                    );
+                }
+            }
+            .box {
+                width: 10rem;
+                height: 40rem;
+                border: 1px solid red;
+                margin: 1rem 0;
+            }
+            .division {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 100%;
+                min-height: 80vh;
+                border: 1px solid blue;
+                background-color: #fff;
+                padding: 0 5rem;
+            }
+            .main-heading {
+                color: var(--e-global-color-primary);
+                font-family: "Lato", Sans-serif;
+                font-size: 45px;
+                font-weight: 600;
+            }
+            p {
+                text-align: center;
+            }
+            h1 {
+                margin: 0;
+            }
+
+            /* CSS for iframe 
+            Use the id selector "automicle-iframe" to style the widget open button
+            For inline button and floating widget, use the following styles:
+
+            Note: For floating widget, make sure to use `openButtonText` parameter to open the widget
+                 and pass the button text as the value.
+                eg. openButtonText=open%20testwidget
+            Note: The styles are applied to the widget open button, not the widget itself.
+            */
+            #automicle-iframe {
+                border: none;
+                border-radius: 25%;
+
+                height: 72px;
+                width: 222px;
+
+                border-radius: 3rem;
+                background-color: #005a7a;
+                border: 1px solid var(--e-global-color-primary);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+                /* Typography */
+                color: #fff;
+                font-size: 25px;
+                font-weight: 300;
+            }
+        </style>
+        <!-- The script tag is important for the proper functioning of the widget across various devices -->
+       <script src="https://www.script.automicle.com/"></script>
+    </head>
+    <body>
+        <!-- Widget -->
+        <!-- Parameters: widgetId, env, iframeWrapperId, openButtonText -->
+        <!-- widgetId: widget id provided by Automicle -->
+        <!-- env: environment, can be DEVELOPMENT or PRODUCTION -->
+        <!-- iframeWrapperId: id of the div where the widget will be placed, for automatic scroll  -->
+        <!-- openButtonText: for floating widget, text of the button that opens the widget -->
+        <div id="letsbook">
+                <iframe
+                    allowfullscreen
+                    allow="geolocation; payment"
+                    src="https://widget.automicle.com/widget.html?widgetId='WIDGET_ID'&env='DEVELOPMENT||PRODUCTION'&iframeWrapperId=letsbook&openButtonText=Open%20Widget"
+                    width="375"
+                    height="720"
+                    style="border: none"
+                    id="automicle-iframe" <!-- Do not change this -->
+                    title="widget"
+                ></iframe>
+            </div>
+    </body>
+</html>
